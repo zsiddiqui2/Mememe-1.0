@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MemeMe_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="svl-6C-ASc">
+                                <rect key="frame" x="40" y="43" width="520" height="393"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="76" width="293" height="444"/>
+                                </variation>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cBk-eN-kJm">
+                                <rect key="frame" x="56" y="83" width="488" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <connections>
+                                    <action selector="topTextonEdit:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="fTt-88-jZV"/>
+                                    <action selector="touchTopText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iUY-3Q-O0J"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vs0-dA-PON">
+                                <rect key="frame" x="56" y="340" width="488" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <connections>
+                                    <action selector="bottomTextonEdit:" destination="vXZ-lx-hvc" eventType="editingDidBegin" id="Qi9-UI-xLV"/>
+                                    <action selector="touchBottomText:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xCc-UH-hlA"/>
+                                </connections>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMv-Uq-ucX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Album" id="eLm-hR-Zjf" userLabel="Image Picker">
+                                        <connections>
+                                            <action selector="pickAnImage:" destination="vXZ-lx-hvc" id="Chm-1g-00X"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Camera " id="GER-1V-Kex">
+                                        <connections>
+                                            <action selector="pickAnImageCamera:" destination="vXZ-lx-hvc" id="2j9-TK-2gd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUg-8L-pdR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" id="b6H-Or-j6e"/>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zMv-Uq-ucX" secondAttribute="bottom" constant="36" id="2eX-Xd-aHY"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vs0-dA-PON" secondAttribute="bottom" constant="230" id="6ua-Aj-UI5"/>
+                            <constraint firstItem="vs0-dA-PON" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="36" id="IcA-AX-Wd9"/>
+                            <constraint firstItem="cBk-eN-kJm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="36" id="Ra3-4q-5sg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cBk-eN-kJm" secondAttribute="trailing" constant="36" id="bGt-1z-T0J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cBk-eN-kJm" secondAttribute="trailing" constant="36" id="cLB-fh-GfA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vs0-dA-PON" secondAttribute="trailing" constant="36" id="eKd-St-Gtr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zMv-Uq-ucX" secondAttribute="trailing" constant="-16" id="gwQ-f7-Jkh"/>
+                            <constraint firstItem="zMv-Uq-ucX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="mMO-8l-FJV"/>
+                            <constraint firstItem="cBk-eN-kJm" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="83" id="r6u-8g-V74"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zMv-Uq-ucX"/>
+                                <exclude reference="MUg-8L-pdR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="gwQ-f7-Jkh"/>
+                                <exclude reference="mMO-8l-FJV"/>
+                                <exclude reference="2eX-Xd-aHY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zMv-Uq-ucX"/>
+                                <include reference="MUg-8L-pdR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="gwQ-f7-Jkh"/>
+                                <include reference="mMO-8l-FJV"/>
+                                <include reference="2eX-Xd-aHY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bottomText" destination="vs0-dA-PON" id="aOF-8C-df7"/>
+                        <outlet property="cameraButton" destination="GER-1V-Kex" id="klG-Zi-4Cv"/>
+                        <outlet property="imageView" destination="svl-6C-ASc" id="rlE-iB-C3U"/>
+                        <outlet property="topText" destination="cBk-eN-kJm" id="SIh-HH-JmS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="313"/>
+        </scene>
+    </scenes>
+</document>
